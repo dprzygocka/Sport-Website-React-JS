@@ -6,17 +6,23 @@ https://nodejs.org/en/download/
 
 https://classic.yarnpkg.com/en/docs/install
 
-## Available Scripts
+To start the project, firtly you need to install the dependencies in your project directory, by running:  
 
-In the project directory, you can run:
+### `yarn install`
+
+After that you can run 
 
 ### `yarn start`
 
-Runs the app in the development mode.\
+The app will run in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+## Available Scripts
+
+In the project directory, you can run:
 
 ### `yarn test`
 
