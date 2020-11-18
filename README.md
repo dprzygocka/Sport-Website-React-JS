@@ -1,7 +1,9 @@
 # Run the project -> pre requirements
 
-To run the project, make sure that you have Node.js and yarn installed. 
+To run the project, make sure that you have Node.js and yarn installed.
+
 https://nodejs.org/en/download/
+
 https://classic.yarnpkg.com/en/docs/install
 
 ## Available Scripts
