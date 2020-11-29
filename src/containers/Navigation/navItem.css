@@ -1,0 +1,13 @@
+.navbar__link:hover {
+    transform: translateY(-2px);
+  }
+  
+.navbar__link {
+    text-transform: none;
+    color: #000000
+}
+
+  .navbar__link--active {
+    background-color: #1D6692;
+    color: #FFFFFF
+  }
