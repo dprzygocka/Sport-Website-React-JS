@@ -14,9 +14,9 @@ export default function Routes() {
         <div>
             <Navigation />
             <Switch>
-                {/* <Redirect from='/' to='/dashboard' exact />*/}
-                <Route path='dashboard' component={Dashboard} exact />
-                <Route path='calendar' component={Calendar} exact />
+                <Redirect from='/' to='/dashboard' exact />
+                <Route path='/dashboard' component={Dashboard} exact />
+                <Route path='/calendar' component={Calendar} exact />
             </Switch>
         </div>
     )
