@@ -6,7 +6,6 @@ import { Provider } from 'react-redux'
 import { store } from './store'
 import Navigation from './containers/Navigation'
 
-
 function App() {
   return (
     <Provider store={store}>

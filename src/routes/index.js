@@ -4,20 +4,25 @@ import Route from './Route'
 import Dashboard from '../containers/Dashboard'
 import Navigation from '../containers/Navigation'
 import Calendar from '../containers/Calendar'
+import Login from '../containers/Login'
+import { connect } from 'react-redux'
+import selectors from './selectors'
 
 /*
     To add a new route to the app, register it here
 */
 
-export default function Routes() {
+const Routes = props => {
     return (
         <div>
-            <Navigation />
+            <Navigation/>
             <Switch>
-                <Redirect from='/' to='/dashboard' exact />
+                <Route path='/' component={Login} exact />
                 <Route path='/dashboard' component={Dashboard} exact />
                 <Route path='/calendar' component={Calendar} exact />
             </Switch>
         </div>
     )
 }
+
+export default connect(selectors)(Routes)

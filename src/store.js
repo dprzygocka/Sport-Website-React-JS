@@ -13,11 +13,7 @@ const sagaMiddleware = createSagaMiddleware()
 export const store = createStore(
     rootReducer,
     initialState,
-    compose(
-        composeWithDevTools(),
-        applyMiddleware(sagaMiddleware)
+    applyMiddleware(sagaMiddleware)
     )
-)
 
 sagaMiddleware.run(rootSaga)
-

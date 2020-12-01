@@ -1,0 +1,21 @@
+
+.container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.login-container {
+    background-color: #1D6692;
+    width: 50%;
+    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    color: #FFFFFF;
+    font-family: 'Salsa'
+}

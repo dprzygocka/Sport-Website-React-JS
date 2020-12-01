@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import teams from './teams'
+import profile from './profile'
 
 const rootReducer = combineReducers({
-    teams
+    teams,
+    profile
 })
 
 export default rootReducer
