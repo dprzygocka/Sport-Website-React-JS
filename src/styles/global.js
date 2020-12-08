@@ -36,6 +36,10 @@ export default createGlobalStyle`
         caret-color: transparent
     }
 
+    .button:focus {
+        outline: none
+    }
+
     .input {
         padding: 12px 20px;
         width: 20%;

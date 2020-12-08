@@ -9,10 +9,9 @@ import { push } from 'react-router-redux';
 
 function* login(action){
     const response = yield call(request, { type: AUTH.LOGIN, rootAction: action }, () => getProfile(action.payload))
-    console.log(response)
 
     if(response.sequence == REQUEST.SUCCESS){
-        yield call(history.push,'/dashboard');
+        history.push('/dashboard');
     }
 }
 

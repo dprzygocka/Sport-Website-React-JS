@@ -1,0 +1,21 @@
+.btn {
+    background: #ededed;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    
+    opacity: 1;
+    transition: opacity 300ms ease;
+    width: 800px;
+    align-self: center;
+}
+  
+.touched {
+    opacity: 0.5;
+}
+
+.btn:hover {
+    opacity: 0.5
+}
