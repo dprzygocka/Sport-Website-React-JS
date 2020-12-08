@@ -14,7 +14,6 @@ const Dashboard = props => {
     return(
         <div>
             <h1>This is a dashboard!</h1>
-            <UserData user_id={1} />
         </div>
     )
 }

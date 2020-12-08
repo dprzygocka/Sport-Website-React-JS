@@ -28,9 +28,7 @@ import 'bootstrap/dist/css/bootstrap.css';
         //this.setState({user : UserData.getUser(user_id)});
         request(`http://localhost:8181/api/profiles/user/`+ user_id, { 
             method : 'get'
-        }).then(response => {
-            console.log(response);
-            this.setState({ 
+        }).then(response => {this.setState({ 
             user:{
                 userId : response.userId,
                 firstName : response.firstName,
@@ -38,10 +36,8 @@ import 'bootstrap/dist/css/bootstrap.css';
                 email : response.email,
                 age : response.age,
                 gender : response.gender,
-                phone : response.phone
-            }
-            })
-        }).catch(error => {
+                phone : response.phone}
+            })}).catch(error => {
             console.log('error: ', error)
             throw error;
         })

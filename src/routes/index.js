@@ -7,7 +7,7 @@ import Calendar from '../containers/Calendar'
 import Login from '../containers/Login'
 import { connect } from 'react-redux'
 import selectors from './selectors'
-
+import UserData from './../containers/User/index'
 /*
     To add a new route to the app, register it here
 */
@@ -20,6 +20,7 @@ const Routes = props => {
                 <Route path='/' component={Login} exact />
                 <Route path='/dashboard' component={Dashboard} exact />
                 <Route path='/calendar' component={Calendar} exact />
+                <Route path='/profile' component={UserData} exact />
             </Switch>
         </div>
     )
