@@ -1,10 +1,12 @@
 import { all } from 'redux-saga/effects'
 import profile from './profile'
 import teams from './teams'
+import user from './user'
 
 const allSagas = [
     teams(),
-    profile()
+    profile(),
+    user()
 ]
 
 export default function* rootSaga(){
