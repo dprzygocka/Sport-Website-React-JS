@@ -1,10 +1,9 @@
 import React from 'react'
 import { Redirect, Switch } from 'react-router-dom'
-import Route from './Route'
+import RouteWrapper from './Route'
 import Dashboard from '../containers/Dashboard'
 import Navigation from '../containers/Navigation'
 import Calendar from '../containers/Calendar'
-import Login from '../containers/Login'
 import { connect } from 'react-redux'
 import selectors from './selectors'
 
@@ -14,14 +13,13 @@ import selectors from './selectors'
 
 const Routes = props => {
     return (
-        <div>
+        <>
             <Navigation/>
             <Switch>
-                <Route path='/' component={Login} exact />
-                <Route path='/dashboard' component={Dashboard} exact />
-                <Route path='/calendar' component={Calendar} exact />
+                <RouteWrapper path='/dashboard' component={Dashboard} exact />
+                <RouteWrapper path='/calendar' component={Calendar} exact />
             </Switch>
-        </div>
+        </>
     )
 }
 

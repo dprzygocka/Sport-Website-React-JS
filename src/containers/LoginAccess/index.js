@@ -13,16 +13,19 @@ class Login extends React.Component {
     handleChange(event) {
         this.setState({ email: event.target.value });
     }
-
+    
     render() {
+        const {isLoggedIn} = this.props;
         return (
-            <div className='container'>
+             !isLoggedIn ? 
+                <div className='login-main-container'>
                 <div className='login-container'>
                     <h2 className='title h2'>Login</h2>
                     <input className='input' type='email' value={this.state.email} onChange={e => this.handleChange(e)}></input>
                     <Button typeof='submit' placeholder='Submit' onClick={() => this.props.login(this.state.email)} style={{ marginTop: '15px' }} />
                 </div>
-            </div>
+            </div> : 
+            {...this.props.children}
         )
     }
 }

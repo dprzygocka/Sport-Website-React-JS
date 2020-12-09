@@ -1,21 +1,21 @@
 import React from 'react'
 import { Route, Redirect } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import Navigation from '../containers/Navigation';
+import selectors from './selectors'
+import { connect } from 'react-redux'
 
+const RouteWrapper = props =>{
+    const {
+        component,
+        isPrivate,
+        isLoggedIn,
+        ...rest} = props;
 
-export default function RouteWrapper({
-    component: Component,
-    isPrivate,
-    ...rest
-}) {
-    const signed = true; //for now we assume that the user is signed in
+   /* if (!isLoggedIn) {
+        return <Redirect to='/dashboard'/>
+    }*/
 
-    if (isPrivate && !isPrivate) {
-        return <Redirect to="/signIn" />
-    }
-
-    return <Route {...rest} component={Component} />
+    return <Route {...rest} component={component} />
 }
 
 RouteWrapper.propTypes = {
@@ -26,3 +26,5 @@ RouteWrapper.propTypes = {
 RouteWrapper.defaultProps = {
     isPrivate: false
 }
+
+export default connect(selectors)(RouteWrapper);

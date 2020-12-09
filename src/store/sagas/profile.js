@@ -10,8 +10,8 @@ import { push } from 'react-router-redux';
 function* login(action){
     const response = yield call(request, { type: AUTH.LOGIN, rootAction: action }, () => getProfile(action.payload))
 
-    if(response.sequence == REQUEST.SUCCESS){
-        history.push('/dashboard');
+    if(response.sequence == REQUEST.ERROR){
+        alert("The user doesn't exist")
     }
 }
 
