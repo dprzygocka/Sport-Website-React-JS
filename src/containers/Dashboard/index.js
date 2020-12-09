@@ -4,6 +4,8 @@ import selectors from './selectors'
 import * as actions from './actions'
 import * as _ from 'lodash'
 
+import UserData from './../User/index.js'
+
 const Dashboard = props => {
     {/*useEffect(() => {
         if(!_.isNil(props.teams))

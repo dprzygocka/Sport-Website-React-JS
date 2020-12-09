@@ -3,6 +3,7 @@ import activities from './activities'
 import profile from './profile'
 import teams from './teams'
 
+
 const allSagas = [
     teams(),
     profile(),

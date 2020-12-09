@@ -18,3 +18,8 @@ export const ACTIVITIES = {
     ADD: 'ACTIVITIES.ADD',
     POST: 'ACTIVITIES.POST'
 }
+
+export const USER ={
+    INIT: 'USER.INIT',
+    FETCH: 'USER.FETCH'
+}
