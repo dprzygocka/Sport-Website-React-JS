@@ -14,5 +14,7 @@ export const AUTH = {
 
 export const ACTIVITIES = {
     INIT: 'ACTIVITIES.INIT',
-    FETCH: 'ACTIVITIES.FETCH'
+    FETCH: 'ACTIVITIES.FETCH',
+    ADD: 'ACTIVITIES.ADD',
+    POST: 'ACTIVITIES.POST'
 }

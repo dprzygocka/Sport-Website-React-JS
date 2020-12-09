@@ -12,6 +12,7 @@ import ActivityModal from './ActivityModal'
 import Button from '../../components/Button'
 import { color } from '../../styles/color'
 import CreateNewActivityModal from './CreateNewActivityModal'
+import LoginAccess from '../LoginAccess'
 
 class Calendar extends Component {
     constructor(props) {
@@ -49,10 +50,15 @@ class Calendar extends Component {
         this.setState({ isCreateNewActivityModalVisible: false })
     }
 
+    componentDidUpdate(){
+        if(_.isEmpty(this.props.activities))
+            this.props.onInit()
+    }
+
     render() {
         const { activities } = this.props
-        console.log(activities)
         return (
+            <LoginAccess>
             <div className='activities-container'>
                 {activities && activities.map(activity => {
                     return (
@@ -95,8 +101,10 @@ class Calendar extends Component {
                     show={this.state.isCreateNewActivityModalVisible}
                     onHide={this.closeCreateNewActivityModal}
                     activity={this.state.isCreateNewActivityModalVisible}
+                    createActivity={this.props.createActivity}
                 />
             </div>
+            </LoginAccess>
         )
     }
 }

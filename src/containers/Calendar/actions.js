@@ -5,3 +5,10 @@ export const onInit = () => {
         type: ACTIVITIES.INIT
     }
 }
+
+export const createActivity = data => {
+    return {
+        type: ACTIVITIES.ADD,
+        payload: data
+    }
+}

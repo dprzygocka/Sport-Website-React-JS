@@ -7,6 +7,9 @@ export default function(state = [], action){
             case(ACTIVITIES.FETCH): {
                 return action.payload;
             }
+            case(ACTIVITIES.POST):{
+                return [...state, action.payload]
+            }
             default:{
                 return state;
             }
