@@ -6,7 +6,8 @@ import Navigation from '../containers/Navigation'
 import Calendar from '../containers/Calendar'
 import { connect } from 'react-redux'
 import selectors from './selectors'
-import UserData from './../containers/User/index'
+import UserData from '../containers/User/index'
+import TeamData from '../containers/Team'
 /*
     To add a new route to the app, register it here
 */
@@ -19,6 +20,7 @@ const Routes = props => {
                 <RouteWrapper path='/dashboard' component={Dashboard} exact />
                 <RouteWrapper path='/calendar' component={Calendar} exact />
                 <RouteWrapper path='/profile' component={UserData} exact />
+                <RouteWrapper path='/teams' component={TeamData} exact />
             </Switch>
         </>
     )
