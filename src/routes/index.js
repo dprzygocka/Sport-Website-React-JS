@@ -18,7 +18,7 @@ const Routes = props => {
             <Navigation/>
             <Switch>
                 <Route path='/' component={Login} exact />
-                <Route path='/dashboard' component={Dashboard} exact />
+                <Route path="/dashboard" component={Dashboard} exact />
                 <Route path='/calendar' component={Calendar} exact />
             </Switch>
         </div>
