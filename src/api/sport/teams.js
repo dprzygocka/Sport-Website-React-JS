@@ -10,7 +10,7 @@ const getHeaders = () => {
 };
 
 export const getTeams = () => {
-    return request('http://localhost:8181/api/teams', {
+    return request(`${process.env.REACT_APP_SERVER}/teams`, {
         method: 'get',
         headers: getHeaders()
     }

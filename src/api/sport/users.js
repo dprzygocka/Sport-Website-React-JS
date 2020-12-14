@@ -7,7 +7,7 @@ const getHeaders = () => {
 };
 
 export const getUser = user_id => {
-    return request(`http://localhost:8181/api/profiles/user/${user_id}`, {
+    return request(`${process.env.REACT_APP_SERVER}/profiles/user/${user_id}`, {
         method: 'get',
         headers: getHeaders()
     }

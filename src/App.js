@@ -9,7 +9,7 @@ import Navigation from './containers/Navigation'
 function App() {
   return (
     <Provider store={store}>
-      <Router history={history}>
+      <Router >
         <Routes />
         <GlobalStyles />
       </Router>

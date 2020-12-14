@@ -26,7 +26,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
     retriveUser(user_id){
         //this.setState({user : UserData.getUser(user_id)});
-        request(`http://localhost:8181/api/profiles/user/`+ user_id, { 
+        request(`${process.env.REACT_APP_SERVER}/profiles/user/`+ user_id, { 
             method : 'get'
         }).then(response => {this.setState({ 
             user:{
