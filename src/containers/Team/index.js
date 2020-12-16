@@ -19,7 +19,7 @@ class TeamData extends React.Component{
     }*/
 
    componentDidMount(){
-       const url="http://localhost:8181/api/teams"
+       const url=`${process.env.REACT_APP_SERVER}/teams`
        axios.get(url).then(response => response.data)
            .then((data) => {
                this.setState({ teams: data })
@@ -29,7 +29,7 @@ class TeamData extends React.Component{
 
 
     retrieveTeam() {
-        request("http://localhost:8181/api/teams", {
+        request(`${process.env.REACT_APP_SERVER}/teams`, {
             method : 'get'
         }).then(response => {this.setState({
             teams : response.data
