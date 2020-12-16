@@ -53,7 +53,7 @@ class Dashboard extends React.Component{
     }
 
     retrieveActivities = (page, size, sort) => {
-      request("http://localhost:8181/api/activities?page=" + page + "&size=" + size + "&sort=" + sort, {
+      request(`${process.env.REACT_APP_SERVER}/activities?page=` + page + "&size=" + size + "&sort=" + sort, {
           method: 'get'
       }).then(response => { //this is the response from web server
         this.setState({
