@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
         this.state ={
         user : {
-            "userId": -1,
+            "userId": -2,
             "firstName": " ",
             "lastName": " ",
             "email": " ",
@@ -18,6 +18,7 @@ import 'bootstrap/dist/css/bootstrap.css';
             "gender": " ",
             "phone": " "
         }
+        /*change*/
     }}
     
     componentDidMount(){
