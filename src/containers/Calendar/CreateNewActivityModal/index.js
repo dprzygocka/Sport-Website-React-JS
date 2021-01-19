@@ -25,7 +25,7 @@ class CreateNewActivityModal extends Component {
     }
 
     findLocations = (startAt, endAt) => {
-        const payload = request(`http://localhost:8181/api/locations/all`, {
+        const payload = request(`${process.env.REACT_APP_SERVER}/locations/all`, {
             data: {
                 startAt: startAt,
                 endAt: endAt
